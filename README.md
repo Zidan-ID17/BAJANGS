@@ -1,2 +1,2 @@
 # BAJANGS
-BAJANGS (Belajar Bahasa Jepang Simple)
+BAJANGS (Belajar Bahasa Jepang Sederhana)
