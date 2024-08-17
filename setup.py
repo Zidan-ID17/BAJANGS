@@ -15,36 +15,15 @@ def koneksi():
 
 def main():
     os.system("cls" if os.name == "nt" else "clear" )
-    print("")
-    printl(f" {putih}SILAHKAN PILIH SISTEM OPERASI YANG ANDA GUNAKAN ")
-    print("")
-    printl("linux")
-    printl("Windows")
-    select = input("    ").lower()
-    if select == "linux":
-        linux = "https://raw.githubusercontent.com/Zidan-ID17/hozon/master/MyApp/linux/a.py"
-        status = requests.get(linux, stream=True)
-        if status.status_code == 200:
-            with open("a.py", "wb") as file:
-                file.write(status.content)
-            subprocess.run(["python", "a.py"], check=True)
-        else:
-            print(" tidak dapat terhubung ke internet ! ")
-            sys.exit()
-          
-    elif select == "windows":
-        windows = "https://raw.githubusercontent.com/Zidan-ID17/hozon/master/MyApp/windows/a.py"
-        status = requests.get(windows, stream=True)
-        if status.status_code == 200:
-            with open("a.py", "wb") as file:
-                file.write(status.content)
-            subprocess.run(["python", "a.py"], check=True))
-        else:
-            print(f"{putih} tidak dapat terhubung ke internet {merah}!! ")
-            sys.exit()
-          
+    os.system("cls" if os.name == "nt" else "clear" )
+    sistem = platform.system()
+    if sistem == "Windows":
+        subprocess.run(["python", "for/win"], check=True)
+    elif sistem == "Linux":
+        subprocess.run({"python","for/lin"}, check=True)
     else:
-        main()
+        print(F"{putih}sistem operasi tidak diketahui/didukung {merah}!!")
+        sys.exit()
 
 
 if __name__ == "__main__":
