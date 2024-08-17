@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 import socket
-from support.clr import merah, putih
+from clr import merah, putih
 
 try:
     socket.create_connection(("8.8.8.8", 50))
