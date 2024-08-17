@@ -1,17 +1,5 @@
 import os, sys, socket, requests, subprocess
-from supp.ctr import printl
-
-putih  = "\033[97m"
-merah = "\033[91m"
-
-def koneksi():
-    try:
-        socket.create_connection(("8.8.8.8", 50))
-        return True
-      
-    except OSError:
-        print(f"{putih} tidak dapat terhubung ke internet {merah}!! ")
-        return False
+from support.clr import merah, putih
 
 def main():
     os.system("cls" if os.name == "nt" else "clear" )
@@ -27,5 +15,5 @@ def main():
 
 
 if __name__ == "__main__":
-    koneksi()
+    subprocess.run(["python","support/cnt"], check=True)
     main()
